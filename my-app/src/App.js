@@ -7,7 +7,6 @@ import './App.css';
 import images from "./images.json";
 
 class App extends React.Component {
-    // Setting this.state.friends to the friends json array
     state = {
       myImages: images,
       score: 0,
@@ -15,30 +14,39 @@ class App extends React.Component {
       selected: []
     };
     componentDidMount () {
+      // Initialize selected states for each image
       this.state.myImages.forEach(element => {
         this.state.selected.push(false);
       });
-      alert("Did mount. length" +  this.state.myImages.length);
+      // alert("Did mount. length" +  this.state.myImages.length);
     }
   
     handleImageClickEvent = id => {
-      // Filter this.state.friends for friends with an id not equal to the id being removed
-      // const friends = this.state.friends.filter(friend => friend.id !== id);
-      // // Set this.state.friends equal to the new friends array
-      // this.setState({ images });
       let selected = [...this.state.selected];
+      let images = [...this.state.myImages];
+      let score = this.state.score;
       let index = Number(id);
 
-      alert("Image click for id=" + id + " selected now=" + selected[index]);
+      // alert("Image click for id=" + id + " selected now=" + selected[index]);
+      if (!selected[index]) {
+        score++;
+      }
       selected[index] = true;
 
       this.setState({selected});
+      this.setState({score});
+      this.setState({
+          myImages: images.sort(() => Math.random() - 0.5),
+          // totalClick: this.state.totalClick + 1
+        });
     };
 
 render() {
     return (
       <Wrapper>
-        <Navbar></Navbar>
+        <Navbar
+          score={this.state.score}
+          topScore={this.state.topScore}></Navbar>
         <Overview></Overview>
           {this.state.myImages.map(image => (
             <ImagesCard

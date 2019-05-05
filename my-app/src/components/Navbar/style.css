@@ -1,11 +1,30 @@
 nav.navbar.navbar-default {
   margin-bottom: 0;
 }
+
 #navbar-left-element {
-  color: blue;
+  /* width: 33%; */
   float: left;
+  color: rgb(207, 207, 251);
+  font-size: 25px;
+  margin: 0px;
+  margin-right: 20px;
+  display: inline;
 }
+#navbar-center-element {
+  /* width: 33%; */
+  color: white;
+  font-size: 25px;
+  margin: 0px;
+  margin-right: 20px;
+  float: left;
+  display: inline;
+}
+
 #navbar-right-element {
-  color:green;
-  float: right;
+  color: rgb(251, 244, 176);
+  font-size: 25px;
+  margin: 0px;
+  float: left;
+  display: inline;
 }
