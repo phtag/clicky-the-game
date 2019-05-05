@@ -36,13 +36,14 @@ class App extends React.Component {
         if (score > topScore) {
           topScore = score;
         }
+        selected[index] = true;
         guess = "You guessed correctly!";
       } else {
         // bad guess. reset and notify user
         guess = "You guessed incorrectly";
         score = 0;
+        selected.fill(false);
       }
-      selected[index] = true;
 
       this.setState({selected});
       this.setState({score});
