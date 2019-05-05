@@ -1,0 +1,11 @@
+nav.navbar.navbar-default {
+  margin-bottom: 0;
+}
+#navbar-left-element {
+  color: blue;
+  float: left;
+}
+#navbar-right-element {
+  color:green;
+  float: right;
+}
