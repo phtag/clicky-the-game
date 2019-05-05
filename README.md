@@ -1,5 +1,5 @@
 # Clicky Game
-https://boiling-castle-13887.herokuapp.com/
+https://phtag.github.io/clicky-the-game/
 
 # Homework - Week 16
 
@@ -15,7 +15,7 @@ NOTE: This project is referenced on my portfolio page at [my portfolio](https://
 
 ### Home page
 
-![Login page Screenshot](/clicky-the-game-screenshot.jpg)
+![Home page Screenshot](clicky-the-game-screenShot.jpg)
 
 
 
